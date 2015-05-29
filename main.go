@@ -148,7 +148,7 @@ func sendEmailNotification(to string, op notificationOp, a *Alert) error {
 
 func main() {
 	flag.Parse()
-	fmt.Printf("smart host: %s, smtp sender: %s", *smtpSmartHost, *smtpSender)
+	fmt.Printf("smart host: %s, smtp sender: %s\n", *smtpSmartHost, *smtpSender)
 
 	alert := &Alert{
 		Summary:     "Hello world",
@@ -163,6 +163,6 @@ func main() {
 
 	err := sendEmailNotification(*smtpSender, notificationOpResolve, alert)
 	if err != nil {
-		fmt.Printf("Error happened: %v\n", err)
+		fmt.Printf(" Error happened: %v\n", err)
 	}
 }
