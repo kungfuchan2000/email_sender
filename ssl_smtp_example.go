@@ -13,10 +13,10 @@ import (
 
 func main() {
 
-    from := mail.Address{"", "alertmanager@jaguaraws.io"}
-    to   := mail.Address{"", "kevin.chan@gettyimages.com"}
-    subj := "supposed to work with ses out of the box"
-    body := "test on KFC"
+    from := mail.Address{"", "lower_alertmanager@jaguaraws.io"}
+    to   := mail.Address{"", "AppDevAdAstra-alerts@gettyimages.com"}
+    subj := "Testing lower aws ses via 465"
+    body := "Please ignore"
 
     // Setup headers
     headers := make(map[string]string)
