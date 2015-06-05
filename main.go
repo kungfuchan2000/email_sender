@@ -90,7 +90,7 @@ func getSMTPAuth(hasAuth bool, mechs string) (smtp.Auth, *tls.Config, error) {
 			if err != nil {
 				return nil, nil, fmt.Errorf("invalid address: %s", err)
 			}
-
+                        fmt.Printf("Hello, I am at getSMTPAuth\n")
 			auth := smtp.PlainAuth(identity, username, password, host)
 			cfg := &tls.Config{ServerName: host}
 			return auth, cfg, nil
